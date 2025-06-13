@@ -1,0 +1,22 @@
+/* フォントの書式 */
+.font-kind{
+    font-family: cursive;
+}
+
+/* トップメニュー(最上部) */
+.top-menu{
+    height: 100px;
+    background-color: black;
+    font-size: 2em;
+    display: flex;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+}
+
+/* トップメニュー(最上部)の中身 */
+.top-menu-block{
+    padding:10px;
+    color: white;
+    margin: auto 0;
+}
