@@ -20,3 +20,38 @@
     color: white;
     margin: auto 0;
 }
+
+/* 自己紹介画像 */
+.self-img{
+    margin-top: 50px;
+    border-radius: 50%;
+}
+
+
+/* タイトル(ABOUT) */
+.title-about{
+    margin-top: 100px;
+}
+.title-about h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.self-introduction{
+    display: flex;
+    justify-content: space-around;
+}
+
+.self-name{
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* ABOUTの説明(言語など) */
+.self-list{
+    list-style: none;
+}
+
+.self-list-ol{
+    list-style-type: none;
+}
