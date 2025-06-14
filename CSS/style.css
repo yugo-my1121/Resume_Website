@@ -20,3 +20,18 @@
     color: white;
     margin: auto 0;
 }
+
+/* 自己紹介画像 */
+.self-img{
+    border-radius: 50%;
+}
+
+
+/* タイトル(ABOUT) */
+.title-about{
+    margin-top: 100px;
+}
+.title-about h2{
+    font-size: 3rem;
+    text-align: center;
+}
