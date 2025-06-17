@@ -6,12 +6,13 @@
 /* トップメニュー(最上部) */
 .top-menu{
     height: 100px;
+    width: 100%;
     background-color: black;
     font-size: 2em;
     display: flex;
-    width: 100%;
+    position: fixed;
     top: 0;
-    z-index: 10000;
+    left: 0;
 }
 
 /* トップメニュー(最上部)の中身 */
@@ -54,4 +55,14 @@
 
 .self-list-ol{
     list-style-type: none;
+}
+
+/* タイトル(SKILL) */
+.title-skill{
+    margin-top: 100px;
+}
+
+.title-skill h2{
+    font-size: 3rem;
+    text-align: center;
 }
