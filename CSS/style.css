@@ -66,3 +66,26 @@
     font-size: 3rem;
     text-align: center;
 }
+
+/*触ったことがある技術*/
+.skill-block{
+    width: 100%;
+    height:300px;
+
+}
+
+.fontend-block{
+    margin-left: 10%;
+}
+
+.backend-block{
+    margin-left: 10%;
+}
+
+.infura{
+    margin-left: 10%;
+}
+
+.font-gray{
+    color: gray;
+}
