@@ -3,6 +3,12 @@
     font-family: cursive;
 }
 
+/* aタグの下線消し */
+.a-decoration{
+    color: white;
+    text-decoration: none;
+}
+
 /* トップメニュー(最上部) */
 .top-menu{
     height: 100px;
