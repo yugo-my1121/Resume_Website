@@ -3,6 +3,12 @@
     font-family: cursive;
 }
 
+/* aタグの下線消し */
+.a-decoration{
+    color: white;
+    text-decoration: none;
+}
+
 /* トップメニュー(最上部) */
 .top-menu{
     height: 100px;
@@ -88,4 +94,39 @@
 
 .font-gray{
     color: gray;
+}
+
+
+/* portforio関連 */
+#portfolio-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+#motivational{
+    width: 500px;
+    height: 200px;
+}
+
+#motivational a{
+    text-decoration: none;
+    color: black;
+}
+
+#motivational h3{
+    text-align: center;
+}
+
+#libraryApp{
+    width: 500px;
+    height: 200px;
+}
+
+#libraryApp a{
+    text-decoration: none;
+    color: black;
+}
+
+#libraryApp h3{
+    text-align: center;
 }
