@@ -15,7 +15,17 @@ fetch(jsonFilePath)
     //html作成
     let html = '';
     for (let i = 0; i < jsonData.data.length; i++) {
-      html += `<h3>${jsonData.data[i].title}</h3>`;
-      container.innerHTML = html;
+      //divタグの作成
+      let createGroup = document.createElement('div');
+      //id付与
+      createGroup.id = jsonData.data[i].idName;
+      html += `<h3><a href = "${jsonData.data[i].url}" >${jsonData.data[i].title}</a></h3>
+              <p>${jsonData.data[i].summary}</p>
+              `;
+      //portfolioを画面に表示
+      createGroup.innerHTML = html;
+      container.appendChild(createGroup);
+      //タグ作成の初期化
+      html = '';
     }
   });
