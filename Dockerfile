@@ -1,14 +1,28 @@
-FROM nginx:latest
+FROM ubuntu:latest
+
+# nginxインストールとvim(ファイル編集用エディタ)必要パッケージ
+RUN apt-get update && \
+  apt-get install -y nginx vim && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+
 # htmlをコンテナ内にコピー
-COPY ./index.html /usr/share/nginx/html/index.html
-COPY ./portforio.html /usr/share/nginx/html/
+COPY ./portforio.html /var/www/html/
+COPY ./index.html /var/www/html/
 # 画像、ファイルを格納するディレクトリを作成
-RUN mkdir /usr/share/nginx/html/JS
-RUN mkdir /usr/share/nginx/html/img
-RUN mkdir /usr/share/nginx/html/data
-RUN mkdir /usr/share/nginx/html/data/CSS
+RUN mkdir /var/www/html/JS
+RUN mkdir /var/www/html/img
+RUN mkdir /var/www/html/data
+RUN mkdir /var/www/html/data/CSS
+RUN rm /var/www/html/index.nginx-debian.html
 # 作成したディレクトリに画像とファイルをコピー(格納)
-COPY ./JS/ /usr/share/nginx/html/JS/
-COPY ./img/ /usr/share/nginx/html/img/
-COPY ./data/ /usr/share/nginx/html/data/
-COPY ./CSS/ /usr/share/nginx/html/CSS/
+COPY ./JS/ /var/www/html/JS/
+COPY ./img/ /var/www/html/img/
+COPY ./data/ /var/www/html/data/
+COPY ./CSS/ /var/www/html/CSS/
+
+# nginxポート開放
+EXPOSE 80
+
+# nginxをフォアグラウンドで起動（コンテナ起動時)
+CMD ["nginx", "-g", "daemon off;"]
